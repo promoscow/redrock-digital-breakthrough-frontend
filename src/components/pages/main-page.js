@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 
 import './index.css'
 import UtilService from "../../service/util-service";
-import {NavigationBar, NewsPage, PersonalPage} from './index';
-import Post from "../posts";
+import {NavigationBar} from './index';
+import {PersonsToQuitList} from '../persons-to-quit-list';
+import JobsList from '../jobs-list';
+import CourseList from "../cource-list";
 
 const utilService = new UtilService();
 
@@ -18,9 +20,14 @@ export default class MainPage extends Component {
             <div>
                 <div>
                     <NavigationBar/>
-                    <PersonalPage/>
-                    <Post/>
-                    <NewsPage/>
+                    <PersonsToQuitList/>
+                    <br/>
+                    <JobsList/>
+                    <br/>
+                    <CourseList/>
+                    {/*<PersonalPage/>*/}
+                    {/*<Post/>*/}
+                    {/*<NewsPage/>*/}
                 </div>
             </div>
         );

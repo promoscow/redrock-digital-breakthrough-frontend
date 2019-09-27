@@ -1,0 +1,22 @@
+.main-progress {
+    margin: 1rem 2rem;
+    height: 50px;
+    max-width: 1200px;
+}
+
+.main-progress-center {
+    margin: 1rem 2rem;
+    height: 50px;
+    max-width: 1200px;
+}
+
+.digit {
+    alignment: right;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.subscription {
+    alignment: right;
+    margin-right: 1rem;
+}
