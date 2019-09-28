@@ -25,7 +25,7 @@ export default class JobsList extends Component {
 
     render() {
 
-        console.log(this.state.jobs);
+        console.log("jobs: ", this.state.jobs);
         let jobs = null;
         if (this.state.jobs !== null) {
             jobs =

@@ -16,7 +16,7 @@ export default class Job extends Component {
         const name = this.state.data.name + ": ";
         const percentage = this.state.data.percentage + "%";
 
-        const link = "/courses?key=" + this.state.data.keyWord;
+        const link = "/courses?query=" + this.state.data.keyWord;
 
         return (
             <div>

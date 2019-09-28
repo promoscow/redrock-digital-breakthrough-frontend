@@ -3,11 +3,19 @@ import React, {Component} from 'react';
 import './course.css';
 
 export default class Course extends Component {
+
+    state = {
+        courses: this.props.cells
+    };
+
     render() {
+
+        console.log("course: ", this.state.courses);
+
         return (
+            <tbody>
             <tr onClick={this.onChoose}>
-                <th scope="row">Java разработка с нуля и до профи</th>
-                <td>53%</td>
+                <th scope="row">{this.state.courses.name}</th>
                 <td>
                     <button
                         className="btn-secondary"
@@ -16,6 +24,7 @@ export default class Course extends Component {
                     </button>
                 </td>
             </tr>
+            </tbody>
         );
     }
 }
