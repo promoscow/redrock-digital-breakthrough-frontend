@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import AuthService from "../../service/auth-service";
+import RestService from "../../service/rest-service";
 import {ConfirmNegative, ConfirmSuccess} from '../confirm';
 
-const authService = new AuthService();
+const authService = new RestService();
 
 export default class ConfirmPage extends Component {
 

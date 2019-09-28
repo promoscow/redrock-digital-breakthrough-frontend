@@ -8,9 +8,9 @@ import App from './components/app';
 import store from './store';
 
 import './index.css';
-import AuthService from "./service/auth-service";
+import RestService from "./service/rest-service";
 
-const authService = new AuthService();
+const authService = new RestService();
 
 ReactDOM.render(
     <Provider store={store}>

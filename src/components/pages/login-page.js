@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import AuthService from '../../service/auth-service';
+import RestService from '../../service/rest-service';
 
 import logo from '../../resources/logo_web_400.png';
 import {Link} from "react-router-dom";
 
-const authService = new AuthService();
+const authService = new RestService();
 
 export default class LoginPage extends Component {
 

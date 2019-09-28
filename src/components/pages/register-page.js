@@ -3,9 +3,9 @@ import {Link} from "react-router-dom";
 
 import './index.css';
 import logo from "../../resources/logo_web_400.png";
-import AuthService from "../../service/auth-service";
+import RestService from "../../service/rest-service";
 
-const authService = new AuthService();
+const authService = new RestService();
 
 class RegisterPage extends Component {
 

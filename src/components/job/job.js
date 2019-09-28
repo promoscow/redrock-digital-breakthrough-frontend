@@ -5,6 +5,7 @@ export default class Job extends Component {
 
     render() {
 
+        const width = 53;
         return (
             <div>
                 <div className="progress main-progress-center">
