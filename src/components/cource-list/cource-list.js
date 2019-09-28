@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Course from '../cource';
+import NavigationBar from "../pages/navigation-bar";
 
 import './cource-list.css';
 
@@ -7,6 +8,7 @@ export default class CourseList extends Component {
     render() {
         return (
             <div>
+                <NavigationBar/>
                 <div className="main-left-course">
                     <h2>Рекомендованные курсы</h2>
                 </div>

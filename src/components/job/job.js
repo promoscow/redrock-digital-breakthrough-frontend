@@ -1,28 +1,52 @@
 import React, {Component} from 'react';
 import './job.css';
+import {Link} from "react-router-dom";
 
 export default class Job extends Component {
 
-    render() {
+    state = {
+        data: this.props.cells
+    };
 
-        const width = 53;
+    render() {
+        const widthStyle = {
+            width: 500
+        };
+        const width = "\"width\": \"" + this.state.data.percentage + "%\"";
+        const name = this.state.data.name + ": ";
+        const percentage = this.state.data.percentage + "%";
+
+        const link = "/courses?key=" + this.state.data.keyWord;
+
         return (
             <div>
-                <div className="progress main-progress-center">
-                    <div className="progress-bar" role="progressbar" style={{"width": "53%"}} aria-valuenow="25"
-                         aria-valuemin="0" aria-valuemax="100">
-                        <table className="main-progress-center">
-                            <tr>
-                                <td className="main-progress digit">
-                                    <h2>Java Developer</h2>
-                                </td>
-                                <td className="main-progress digit">
-                                    <h2>53%</h2>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                <Link to={link}>
+                <table className="main-progress-center">
+                    <tr>
+                        <td className="main-progress digit">
+                            <h2>{name}</h2>
+                        </td>
+                        <td className="main-progress digit">
+                            <h2>{percentage}</h2>
+                        </td>
+                    </tr>
+                </table>
+                </Link>
+                {/*<div className="progress main-progress-center">*/}
+                {/*    <div className="progress-bar" role="progressbar" style={{width}} aria-valuenow={this.state.data.percentage}*/}
+                {/*         aria-valuemin="0" aria-valuemax="100">*/}
+                {/*        <table className="main-progress-center">*/}
+                {/*            <tr>*/}
+                {/*                <td className="main-progress digit">*/}
+                {/*                    <h2>{name}</h2>*/}
+                {/*                </td>*/}
+                {/*                <td className="main-progress digit">*/}
+                {/*                    <h2>{percentage}</h2>*/}
+                {/*                </td>*/}
+                {/*            </tr>*/}
+                {/*        </table>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         );
     }

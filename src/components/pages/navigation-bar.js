@@ -7,7 +7,7 @@ export default class NavigationBar extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a className="navbar-brand" href="#">Переквалификатор</a>
+                    <a className="navbar-brand" href="/">Переквалификатор</a>
                 </nav>
             </div>
         );

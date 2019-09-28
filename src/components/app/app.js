@@ -4,6 +4,7 @@ import {AfterRegisterPage, ConfirmPage, LoginPage, MainPage, RegisterPage, Remin
 import PersonToQuit from '../person-to-quit';
 import Job from '../job';
 import JobList from '../jobs-list';
+import CourseList from '../cource-list';
 
 import './app.css';
 
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/person" component={ PersonToQuit } />
             <Route path="/job" component={ Job } />
             <Route path="/jobList" component={ JobList } />
+            <Route path="/courses" component={ CourseList } />
         </Switch>
     )
 };

@@ -127,25 +127,25 @@ export default class RestServiceMock {
             keyWord: "java"
         },
         {
-            id: 1,
+            id: 2,
             name: "PHP DEVELOPER",
             percentage: 53,
             keyWord: "php"
         },
         {
-            id: 1,
+            id: 3,
             name: "FRONTEND DEVELOPER",
             percentage: 45,
             keyWord: "frontend"
         },
         {
-            id: 1,
+            id: 4,
             name: "QA-ИНЖЕНЕР",
             percentage: 38,
             keyWord: "qa"
         },
         {
-            id: 1,
+            id: 5,
             name: "IT-ИНЖЕНЕР",
             percentage: 21,
             keyWord: "it"
