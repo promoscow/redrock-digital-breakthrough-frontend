@@ -16,7 +16,7 @@ const App = () => {
             <Route path="/remind" component={ RemindPasswordPage } />
             <Route path="/confirm" component={ ConfirmPage } />
             <Route path="/after" component={ AfterRegisterPage } />
-            <Route path="/personToQuit" component={ PersonToQuit } />
+            <Route path="/person" component={ PersonToQuit } />
             <Route path="/job" component={ Job } />
             <Route path="/jobList" component={ JobList } />
         </Switch>

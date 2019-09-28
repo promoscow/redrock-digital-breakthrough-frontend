@@ -98,8 +98,8 @@ export default class RestService {
         return response.json();
     };
 
-    getVacancies = async (query) => {
-        const response = await fetch(`${this._apiPath}${this._getVacancies}?query=${query}`)
+    getVacancies = async (id) => {
+        const response = await fetch(`${this._apiPath}${this._getVacancies}?id=${id}`)
             .catch(() => {
                 throw new Error('404');
             });
@@ -109,8 +109,8 @@ export default class RestService {
         return response.json();
     };
 
-    getCourses = async (id) => {
-        const response = await fetch(`${this._apiPath}${this._getCourses}?id=${id}`)
+    getCourses = async (query) => {
+        const response = await fetch(`${this._apiPath}${this._getCourses}?query=${query}`)
             .catch(() => {
                 throw new Error('404');
             });

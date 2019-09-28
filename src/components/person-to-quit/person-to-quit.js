@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 
 export default class PersonToQuit extends Component {
 
-    onChoose = () => {
-        this.props.history.push(`/personToQuit`)
+    state = {
+        data: this.props.cells
     };
 
     render() {
+        const link = "/jobList?id=" + this.state.data.id;
+
         return (
-            <tr onClick={this.onChoose}>
-                <th scope="row">Иванов И. И.</th>
-                <td>Бухгалтерской мути</td>
-                <td>Компьютерный червь</td>
+            <tbody>
+            <tr key={this.state.data.id}>
+                <td>{this.state.data.name}</td>
+                <td>{this.state.data.profession}</td>
+                <td>
+                    <Link to={link}>Анализ</Link>
+                </td>
             </tr>
+            </tbody>
         );
     }
 }

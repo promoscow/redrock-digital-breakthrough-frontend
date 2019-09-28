@@ -5,7 +5,13 @@ import './persons-to-quit-list.css';
 
 export default class PersonsToQuitList extends Component {
 
+    state = {
+        persons: this.props.props
+    };
+
     render() {
+        console.log("state: ", this.state.persons);
+
         return (
             <div>
                 <div className="main-left-persons">
@@ -16,13 +22,11 @@ export default class PersonsToQuitList extends Component {
                         <thead>
                         <tr>
                             <th scope="col">Ф.И.О</th>
-                            <th scope="col">Управление</th>
                             <th scope="col">Должность</th>
+                            <th scope="col">Действие</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <PersonToQuit/>
-                        </tbody>
+                        {this.state.persons.map((r) => <PersonToQuit cells={r}/>)}
                     </table>
                 </div>
             </div>
