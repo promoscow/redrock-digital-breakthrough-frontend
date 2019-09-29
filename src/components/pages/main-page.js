@@ -4,10 +4,10 @@ import './index.css'
 import {NavigationBar} from './index';
 import JobsList from '../jobs-list';
 import CourseList from "../cource-list";
-import RestServiceMock from "../../service/rest-service-mock";
 import {PersonsToQuitList} from "../persons-to-quit-list";
+import RestService from "../../service/rest-service";
 
-const apiService = new RestServiceMock();
+const apiService = new RestService();
 
 export default class MainPage extends Component {
 
