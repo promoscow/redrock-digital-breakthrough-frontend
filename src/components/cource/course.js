@@ -14,11 +14,11 @@ export default class Course extends Component {
 
         return (
             <tbody>
-            <tr onClick={this.onChoose}>
-                <th scope="row">{this.state.courses.name}</th>
+            <tr key={this.state.courses.name} onClick={this.onChoose}>
+                <td>{this.state.courses.name}</td>
                 <td>
                     <button
-                        className="btn-secondary"
+                        className="btn btn-outline-primary"
                         onClick={this.onSubmit}>
                         Предложить
                     </button>

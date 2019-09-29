@@ -5,9 +5,9 @@ import {NavigationBar} from './index';
 import JobsList from '../jobs-list';
 import CourseList from "../cource-list";
 import {PersonsToQuitList} from "../persons-to-quit-list";
-import RestService from "../../service/rest-service";
+import RestServiceMock from "../../service/rest-service-mock";
 
-const apiService = new RestService();
+const apiService = new RestServiceMock();
 
 export default class MainPage extends Component {
 
@@ -54,12 +54,10 @@ export default class MainPage extends Component {
 
         return (
             <div>
-                <div>
                     <NavigationBar/>
                     {riskGroupList}
                     {vacanciesList}
                     {coursesList}
-                </div>
             </div>
         );
     }

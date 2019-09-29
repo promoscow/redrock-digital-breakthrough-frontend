@@ -15,12 +15,40 @@
 }
 
 .main-left-persons {
-    height: 50px;
-    margin: 2rem 2rem 1rem;
+    margin: 2rem 10% 1rem;
     max-width: 1200px;
+}
+
+.main-left-persons-height {
+    margin: 2rem 10% 1rem;
+    max-width: 1200px;
+    height: 50px;
+    vertical-align: center;
 }
 
 .main-progress {
     margin: 1rem 2rem;
     height: 50px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.main-left-title {
+    alignment: center;
+    margin: 2rem 1rem 2rem;
+    max-width: 1200px;
+}
+
+.main-color {
+    color: #1976D2;
+}
+
+.main-bg-color {
+    background-color: #1976D2;
+}
+
+.main-bar {
+    min-height: 100px;
 }

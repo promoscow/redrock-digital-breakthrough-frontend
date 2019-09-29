@@ -3,9 +3,10 @@ import Job from '../job';
 
 import './jobs-list.css';
 import NavigationBar from "../pages/navigation-bar";
-import RestService from "../../service/rest-service";
+import RestServiceMock from "../../service/rest-service-mock";
+import person from "../../resources/account-search-outline.png";
 
-const apiService = new RestService();
+const apiService = new RestServiceMock();
 
 export default class JobsList extends Component {
 
@@ -30,10 +31,27 @@ export default class JobsList extends Component {
         if (this.state.jobs !== null) {
             jobs =
                 <div>
-                    <div  className="main-left-jobs">
-                        <h2>Наиболее подходящие вакансии</h2>
+                    <div className="job">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div className="main-left-title">
+                                    <img src={person}/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="main-left-title">
+                                        <br/>
+                                        <h2 className="main-color">Наиболее подходящие вакансии</h2>
+                                        <hr/>
+                                        <h4>Ниже подобраны вакансии, наиболее подходящие для переквалификации данного сотрудника, на основании исторического опыта компании. Вы можете выбрать программу переобучения.</h4>
+                                        <br/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div>
+                    <div  className="job">
                         {this.state.jobs.map((r) => <Job cells={r}/>)}
                     </div>
                 </div>

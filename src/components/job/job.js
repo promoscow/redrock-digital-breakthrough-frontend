@@ -20,33 +20,36 @@ export default class Job extends Component {
 
         return (
             <div>
+                {/*<Link to={link}>*/}
+                {/*<table>*/}
+                {/*    <tr>*/}
+                {/*        <td className="main-progress digit">*/}
+                {/*            <h2>{name}</h2>*/}
+                {/*        </td>*/}
+                {/*        <td className="main-progress digit">*/}
+                {/*            <h2>{percentage}</h2>*/}
+                {/*        </td>*/}
+                {/*    </tr>*/}
+                {/*</table>*/}
+                {/*</Link>*/}
                 <Link to={link}>
-                <table className="main-progress-center">
-                    <tr>
-                        <td className="main-progress digit">
-                            <h2>{name}</h2>
-                        </td>
-                        <td className="main-progress digit">
-                            <h2>{percentage}</h2>
-                        </td>
-                    </tr>
-                </table>
+                    <div className="progress main-progress-center">
+                        <div className="progress-bar" role="progressbar" style={{width}}
+                             aria-valuenow={this.state.data.percentage}
+                             aria-valuemin="0" aria-valuemax="100">
+                            <table className="main-progress-center">
+                                <tr>
+                                    <td className="main-progress digit">
+                                        <h2>{name}</h2>
+                                    </td>
+                                    <td className="main-progress digit">
+                                        <h2>{percentage}</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </Link>
-                {/*<div className="progress main-progress-center">*/}
-                {/*    <div className="progress-bar" role="progressbar" style={{width}} aria-valuenow={this.state.data.percentage}*/}
-                {/*         aria-valuemin="0" aria-valuemax="100">*/}
-                {/*        <table className="main-progress-center">*/}
-                {/*            <tr>*/}
-                {/*                <td className="main-progress digit">*/}
-                {/*                    <h2>{name}</h2>*/}
-                {/*                </td>*/}
-                {/*                <td className="main-progress digit">*/}
-                {/*                    <h2>{percentage}</h2>*/}
-                {/*                </td>*/}
-                {/*            </tr>*/}
-                {/*        </table>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </div>
         );
     }

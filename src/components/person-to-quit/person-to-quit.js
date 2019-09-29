@@ -16,7 +16,8 @@ export default class PersonToQuit extends Component {
                 <td>{this.state.data.name}</td>
                 <td>{this.state.data.profession}</td>
                 <td>
-                    <Link to={link}>Анализ</Link>
+                    <Link to={link}><button type="button" className="btn btn-outline-primary">Подобрать вакансии</button></Link>
+
                 </td>
             </tr>
             </tbody>

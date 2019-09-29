@@ -54,6 +54,14 @@
     max-width: 400px;
 }
 
+.main-title {
+    color: white;
+}
+
+.color-link {
+    color: black;
+}
+
 .error-message {
     color: #660000;
 }
@@ -79,4 +87,8 @@
 
 .bg-white {
     background-color: white;
+}
+
+.title-padding {
+    margin-left: 50%;
 }

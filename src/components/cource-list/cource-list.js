@@ -3,9 +3,10 @@ import Course from '../cource';
 import NavigationBar from "../pages/navigation-bar";
 
 import './cource-list.css';
-import RestService from "../../service/rest-service";
+import RestServiceMock from "../../service/rest-service-mock";
+import person from "../../resources/account-star-outline.png";
 
-const apiService = new RestService();
+const apiService = new RestServiceMock();
 
 export default class CourseList extends Component {
 
@@ -33,10 +34,28 @@ export default class CourseList extends Component {
             courses =
                 <div>
                     <div className="main-left-course">
-                        <h2>Рекомендованные курсы</h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div className="main-left-title">
+                                        <img src={person}/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="main-left-title">
+                                        <br/>
+                                        <h2 className="main-color">Рекомендованные курсы</h2>
+                                        <hr/>
+                                        <h4>Предложите сотруднику одну или несколько программ для переквалификации, на Ваш выбор.</h4>
+                                        <h4>Сотрудник получит письмо с Вашими рекомендациями и сможет приступить к переквалификации самостоятельно.</h4>
+                                        <br/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     <div className="main-left-course">
-                        <table className="table table-hover">
+                        <table className="table table-light">
                             <thead>
                             <tr>
                                 <th scope="col">Курс</th>
@@ -46,7 +65,7 @@ export default class CourseList extends Component {
                             {this.state.courses.map((r) => <Course cells={r}/>)}
                             <div>
                                 <button
-                                    className="btn-secondary button-custom-course"
+                                    className="btn btn-outline-primary button-custom-course"
                                     onClick={this.onSubmit}>
                                     Предложить все
                                 </button>
