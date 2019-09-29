@@ -3,10 +3,10 @@ import Course from '../cource';
 import NavigationBar from "../pages/navigation-bar";
 
 import './cource-list.css';
-import RestServiceMock from "../../service/rest-service-mock";
 import person from "../../resources/account-star-outline.png";
+import RestService from "../../service/rest-service";
 
-const apiService = new RestServiceMock();
+const apiService = new RestService();
 
 export default class CourseList extends Component {
 

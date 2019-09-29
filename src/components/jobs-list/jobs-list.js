@@ -3,10 +3,10 @@ import Job from '../job';
 
 import './jobs-list.css';
 import NavigationBar from "../pages/navigation-bar";
-import RestServiceMock from "../../service/rest-service-mock";
 import person from "../../resources/account-search-outline.png";
+import RestService from "../../service/rest-service";
 
-const apiService = new RestServiceMock();
+const apiService = new RestService();
 
 export default class JobsList extends Component {
 
