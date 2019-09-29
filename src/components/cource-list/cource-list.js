@@ -5,6 +5,7 @@ import NavigationBar from "../pages/navigation-bar";
 import './cource-list.css';
 import person from "../../resources/account-star-outline.png";
 import RestService from "../../service/rest-service";
+import {Link} from "react-router-dom";
 
 const apiService = new RestService();
 
@@ -64,11 +65,11 @@ export default class CourseList extends Component {
                             </thead>
                             {this.state.courses.map((r) => <Course cells={r}/>)}
                             <div>
-                                <button
+                                <Link to={"/after"}><button
                                     className="btn btn-outline-primary button-custom-course"
                                     onClick={this.onSubmit}>
                                     Предложить все
-                                </button>
+                                </button></Link>
                             </div>
                         </table>
                     </div>
